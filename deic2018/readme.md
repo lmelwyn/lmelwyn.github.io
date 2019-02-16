@@ -2,4 +2,4 @@
 
 Introduction to Ansible and OpenHPC
 
-  * [slides](http://lmelwyn.github.io/lmelwyn/deic2018/)
+  * [slides](http://lmelwyn.github.io/deic2018/)
