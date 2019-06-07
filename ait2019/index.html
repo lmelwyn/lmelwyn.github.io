@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Untitled</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="revealjs/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="revealjs/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="style/custom.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="revealjs/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="katex/katex.min.js"></script><script src="katex/contrib/auto-render.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body);
+  });</script><link rel="stylesheet" href="katex/katex.min.css" />
+
+<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
+<script>
+  function addEvent(element, eventName, fn) {
+    if (element.addEventListener)
+      element.addEventListener(eventName, fn, false);
+    else if (element.attachEvent)
+      element.attachEvent('on' + eventName, fn);
+  }
+
+  addEvent(window, 'load', function() {
+    twemoji.parse(document.body, {'folder': 'svg', 'ext': '.svg'});
+  });
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+<div class="logo"><img src="style/logo.svg" /></div>
+    <div class="slides">
+<section data-background="style/background.svg"><img src="style/warmup.svg" /></section>
+
+
+<section data-background="style/background.svg"><section id="hvem-er-vi" class="title-slide slide level1"><h1>Hvem er vi ?</h1></section><section id="research-it" class="slide level2">
+<h2>Research IT</h2>
+<h3 id="high-performance-computing-team">High Performance Computing team</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Lars</th>
+<th>+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frank</td>
+<td><img data-src="./images/frans.jpg" style="width:50.0%" /></td>
+</tr>
+<tr class="even">
+<td>Martin</td>
+<td><img data-src="./images/mhros.jpg" style="width:50.0%" /></td>
+</tr>
+</tbody>
+</table>
+</section><section id="hvad-gør-vi" class="slide level2">
+<h2>Hvad gør vi ?</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>HPC Opgaver</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Administrerer og vedligeholder hardware og software</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Designer, anskaffer og idriftsætter</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Automatiserer, optimerer og koder infrastruktur</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Organiserer og dokumenterer</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Opdrager, uddanner og supporterer brugerne</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Ajourfører os med ny HPC relevant hardware og software</td>
+</tr>
+</tbody>
+</table>
+<p><img data-src="./images/checkk.png" style="width:10.0%" /></p>
+</section><section id="regneklynger" class="slide level2">
+<h2>Regneklynger</h2>
+<ul>
+<li>Gorm, 80 noder, 900 kerner, QLogic QDR Infiniband</li>
+<li>Jess, 320 nodes, 6400 kerner, QLogic QDR Infiniband</li>
+</ul>
+</section><section id="storageklynger" class="slide level2">
+<h2>Storageklynger</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Mimer I</td>
+<td>lustre</td>
+<td>~ 0.5 PB</td>
+</tr>
+<tr class="even">
+<td>Mimer II</td>
+<td>lustre</td>
+<td>~ 1.5 PB</td>
+</tr>
+<tr class="odd">
+<td>Tape</td>
+<td>TSM</td>
+<td>~ 3 PB</td>
+</tr>
+</tbody>
+</table>
+</section><section id="brugergrupper" class="slide level2">
+<h2>Brugergrupper</h2>
+<ul>
+<li><a href="https://www.vindenergi.dtu.dk">https://www.vindenergi.dtu.dk/</a></li>
+<li><a href="https://www.mek.dtu.dk" class="uri">https://www.mek.dtu.dk</a></li>
+<li><a href="https://www.elektro.dtu.dk/" class="uri">https://www.elektro.dtu.dk/</a></li>
+<li><a href="https://www.nutech.dtu.dk" class="uri">https://www.nutech.dtu.dk</a></li>
+<li><a href="https://www.space.dtu.dk" class="uri">https://www.space.dtu.dk</a></li>
+<li><a href="https://www.oilgas.dtu.dk" class="uri">https://www.oilgas.dtu.dk</a></li>
+<li><a href="https://www.fysik.dtu.dk" class="uri">https://www.fysik.dtu.dk</a></li>
+<li>med flere</li>
+</ul>
+<h3 id="stats">Stats</h3>
+<ul>
+<li>ca 400 brugere</li>
+<li>ca 40 daglige unikke logins</li>
+</ul>
+<p>som anvender os til:</p>
+</section><section id="anvendelse-af-jess-1" class="slide level2">
+<h2>Anvendelse af Jess 1</h2>
+<ul>
+<li>rotor interaktion (Ellipsys CFD / turbulens), Wind Energ. Sci., 4, 251-271, 2019</li>
+</ul>
+<p><img data-src="./images/wind-1.png" style="width:60.0%" /></p>
+<p><img data-src="./images/wind-2.png" style="width:50.0%" /></p>
+</section><section id="anvendelse-af-jess-2" class="slide level2">
+<h2>Anvendelse af Jess 2</h2>
+<p><img data-src="./images/aage-1.png" style="width:50.0%" /></p>
+<p><img data-src="./images/aage-2.png" style="width:50.0%" /></p>
+</section><section id="anvendelse-af-jess-3" class="slide level2">
+<h2>Anvendelse af Jess 3</h2>
+<p><img data-src="./images/joealex-2.png" style="width:40.0%" /></p>
+<p><img data-src="./images/lampp.png" style="width:40.0%" /></p>
+</section></section>
+<section data-background="style/background.svg"><section id="sophia" class="title-slide slide level1"><h1>Sophia</h1></section><section id="er-en-supercomputer" class="slide level2">
+<h2>er en supercomputer ?</h2>
+</section><section id="super-versus-normal-computer" class="slide level2">
+<h2>Super versus normal computer</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Type</th>
+<th>Tek</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>CPUer</td>
+<td>High-end dual-socket multi-core CPUer</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>GPUer</td>
+<td>Graphics Processing Unit PCI kort, micro CPUer</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Netværk</td>
+<td>100/10 Gpbs ethernet</td>
+</tr>
+<tr class="even">
+<td>+</td>
+<td>Fabric</td>
+<td>400/200/100 Gbps interconnect, bidirektionel</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>FPGAer</td>
+<td>Field Programmable Gate Arrays accelerator kort</td>
+</tr>
+<tr class="even">
+<td>+</td>
+<td>Software</td>
+<td>Distribueret og parallel computing</td>
+</tr>
+<tr class="odd">
+<td>+</td>
+<td>Storage</td>
+<td>Delt, parallelt og skalerbart</td>
+</tr>
+</tbody>
+</table>
+</section><section id="high-performance-computering-hpc" class="slide level2">
+<h2>High-performance computering HPC</h2>
+<ul>
+<li>1 job på N noder</li>
+<li>samtidige og afhængige = parallel</li>
+<li>stor båndbredde</li>
+<li>kort ventetid (latency)</li>
+</ul>
+<h3 id="hyper-scaling-computing-hsc">Hyper-scaling computing HSC</h3>
+<ul>
+<li>N job på hver 1 node</li>
+<li>samtidige og uafhængige = concurrent</li>
+</ul>
+<h3 id="high-performance-storage-system-hpss">High-performance storage system HPSS</h3>
+<ul>
+<li>ultra-hurtig</li>
+<li>høj kapacitet</li>
+</ul>
+</section><section id="beregningstyper" class="slide level2">
+<h2>Beregningstyper</h2>
+<ul>
+<li>Compute begrænset -&gt; Intel, snart AMD
+<ul>
+<li>vektorisering, SIMD</li>
+<li>CPU instruktioner, SSEx,AVXx,FMAx</li>
+</ul></li>
+<li>Memory begrænset -&gt; AMD, snart Intel
+<ul>
+<li>bw/lat kerne lokal hukommelse, cache hierakier L1,L2,L3</li>
+<li>bw/lat til hoved hukommelse (RAM)</li>
+</ul></li>
+<li>I/O begrænset
+<ul>
+<li>disk</li>
+<li>netværk</li>
+</ul></li>
+</ul>
+</section><section id="sophia-udbud" class="slide level2">
+<h2>Sophia udbud</h2>
+</section><section id="eu-udbud" class="slide level2">
+<h2>EU udbud</h2>
+<ul>
+<li>lang og rigid process, omfattende
+<ul>
+<li>udbudsmaterial</li>
+<li>evaluering</li>
+</ul></li>
+<li>kravsspecifikationer
+<ul>
+<li>HPC, memory + I/O netværk</li>
+<li>Fabric, interconnect + storage<br />
+</li>
+</ul></li>
+<li>masse af ventetid
+<ul>
+<li>udbudsstandstill</li>
+<li>leverance problemer</li>
+<li>miniudbud på storage</li>
+<li>udbud på container</li>
+</ul></li>
+</ul>
+</section><section id="bang-for-the-buck" class="slide level2">
+<h2>Bang for the buck</h2>
+<blockquote>
+<p>“Bang” af tilbud udregnes som en vægtet sum:</p>
+<p><span class="math display">\[E^{\tau,\alpha}=\sum_{\beta=1,2,3,4}W_{\beta}Q_{\beta,}^{\tau,\alpha},\]</span></p>
+<p>som tilbudsgiver skal forsøge at maximere.</p>
+<p><span class="math display">\[Q_{\beta}^{\tau,\alpha}=\dfrac{{\displaystyle \sum_{\gamma}}w_{\beta,\gamma}A_{\gamma}^{\tau,\alpha}}{{\displaystyle \sum_{\tau,\alpha,\gamma}}w_{\beta,\gamma}A_{\gamma}^{\tau,\alpha}}\ \mathrm{for}\ \beta=
+1,2,3\]</span></p>
+<p><span class="math display">\[Q_{4}^{\tau,\alpha}=\left(\dfrac{N^{\tau,\alpha}}{N^{0}}\right)\sum_{\gamma}w_{4,\gamma}\dfrac{T_{\gamma}^{\tau,\alpha}}{T_{\gamma}^{0}}\]</span></p>
+</blockquote>
+</section><section id="and-the-oscar-goes-to-.." class="slide level2">
+<h2>.. and the Oscar goes to ..</h2>
+<p><img data-src="./images/double.winner.ait.svg" style="width:50.0%" /></p>
+<blockquote>
+<p>ATEA / DELL</p>
+</blockquote>
+</section><section id="sophia-klyngen-meget-speciel" class="slide level2">
+<h2>Sophia klyngen = meget speciel !!</h2>
+<ul>
+<li>524 Dell R7425 dual socket
+<ul>
+<li>AMD EPYC 7351 / 16 kerner noder (1 Gen server siden 2012)</li>
+<li>1 x 100 Gbps Infiniband Mellanox</li>
+<li>2 x 10 Gbps ethernet</li>
+<li>16748 kerner</li>
+</ul></li>
+</ul>
+<p><img data-src="./images/r7425.jpeg" style="width:30.0%" /></p>
+<ul>
+<li>2 login noder med 256 GB RAM og 2xP4000 NVIDIA GPUer</li>
+<li>490 compute noder med 128 GB RAM / 1 TB HDD</li>
+<li>32 compute noder med 256 GB RAM / 1 TB HDD</li>
+</ul>
+</section><section id="amd-epyc-cpu-og-hpcccccx" class="slide level2">
+<h2>AMD EPYC CPU og HPCCCCCX</h2>
+<ul>
+<li><a href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Zen microarkitektur</a></li>
+<li>MCM (multi-chip-module)</li>
+<li>SoC (system-on-chip), north/south, USB, SATA …</li>
+<li>Chiplets, core complexes, zeppeliner die</li>
+<li>Infinity fabric, inter core / socket connect</li>
+<li>non-uniform memory access</li>
+</ul>
+<p><img data-src="./images/epyc-processor.png" style="width:25.0%" /> <img data-src="./images/breaking-moores-law.png" style="width:33.0%" /> <img data-src="./images/epyc-dual.png" style="width:30.0%" /></p>
+<p><strong>high performance computing cluster of clusters of core complexes</strong></p>
+</section><section id="netværk" class="slide level2">
+<h2>Netværk</h2>
+<ul>
+<li>15 x Dell Networking S3048, 48 x 1 Gbps + 4 x 10 Gbps</li>
+<li>15 x Dell Networking S4048-ON, 48 x 10 Gbps + 6 x 40 Gbps</li>
+</ul>
+<p><img data-src="./images/network.png" style="width:45.0%" /></p>
+</section><section id="infiniband-fabric-node-interconnect" class="slide level2">
+<h2>Infiniband Fabric / Node interconnect</h2>
+<ul>
+<li>2 x Mellanox S7890, managed 100G EDR</li>
+<li>47 x Mellanox S7800, unmanaged 100G EDR</li>
+</ul>
+<p><img data-src="./images/fabric-sophia.png" style="width:25.0%" /></p>
+</section><section id="fat-tree-topologi" class="slide level2">
+<h2>Fat tree topologi</h2>
+<p><img data-src="./images/fat-tree.png" style="width:70.0%" /></p>
+<ul>
+<li>100 Gbps Mellanox Infiniband, 25 Tbps mellem række 1 og 2
+<ul>
+<li>100 Mbps Internet til 250000 husstande</li>
+<li>kopier en 3 TB disk med et finger knips</li>
+</ul></li>
+</ul>
+</section><section id="storage-og-fil-systemer" class="slide level2">
+<h2>Storage og fil systemer</h2>
+<ul>
+<li>ceph, distribueret, robust, self-healing filsystem, multifunktions, 1+ PB</li>
+<li>beegfs/beeond parallelt og ultra-hurtigt SSD og HDD</li>
+</ul>
+<p><img data-src="./images/sophia.svg" style="width:45.0%" /></p>
+</section><section id="cluster-framework" class="slide level2">
+<h2>Cluster framework</h2>
+<p><img data-src="./images/overview.svg" style="width:50.0%" /></p>
+</section><section id="open-source-software-stack" class="slide level2">
+<h2>Open source software stack</h2>
+<p><img data-src="./images/montage.png" style="width:50.0%" /></p>
+</section><section id="take-away" class="slide level2">
+<h2>Take away</h2>
+<h3 id="sophia-er">Sophia er :</h3>
+<ul>
+<li>2 lokationer, serverrum og serverplads</li>
+<li>~ 1000 fysiske HP og Dell noder</li>
+<li>~ 24000 kerner</li>
+<li>~ 70 Intel og Mellanox Infiniband switche</li>
+<li>~ 3 fat trees</li>
+<li>~ 50 HP og Dell 1G og 10G ethernet switche</li>
+<li>er den første EPYC klynge i Europa</li>
+<li>en unik supercomputer i danske HPC landskab</li>
+<li>den stærkeste CFD supercomputer i DK</li>
+<li>største sammenhængende 1:1 nonblocking IB 100 Gbps fat tree</li>
+<li>ceph + burstbuffer storage</li>
+<li>70 TB RAM</li>
+<li>522 TB HDD</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="revealjs/lib/js/head.min.js"></script>
+  <script src="revealjs/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true },
+          { src: 'revealjs/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
